@@ -1,0 +1,285 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "AutoCAD.NET/24.1.51000": {
+        "type": "package",
+        "dependencies": {
+          "AutoCAD.NET.Core": "[24.1.51000]"
+        },
+        "compile": {
+          "lib/net47/AcCui.dll": {
+            "related": ".xml"
+          },
+          "lib/net47/AcDx.dll": {
+            "related": ".xml"
+          },
+          "lib/net47/AcMgd.dll": {
+            "related": ".xml"
+          },
+          "lib/net47/AcMr.dll": {
+            "related": ".xml"
+          },
+          "lib/net47/AcSeamless.dll": {
+            "related": ".xml"
+          },
+          "lib/net47/AcTcMgd.dll": {
+            "related": ".xml"
+          },
+          "lib/net47/AcWindows.dll": {
+            "related": ".xml"
+          },
+          "lib/net47/AdUIMgd.dll": {
+            "related": ".xml"
+          },
+          "lib/net47/AdUiPalettes.dll": {
+            "related": ".xml"
+          },
+          "lib/net47/AdWindows.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net47/AcCui.dll": {
+            "related": ".xml"
+          },
+          "lib/net47/AcDx.dll": {
+            "related": ".xml"
+          },
+          "lib/net47/AcMgd.dll": {
+            "related": ".xml"
+          },
+          "lib/net47/AcMr.dll": {
+            "related": ".xml"
+          },
+          "lib/net47/AcSeamless.dll": {
+            "related": ".xml"
+          },
+          "lib/net47/AcTcMgd.dll": {
+            "related": ".xml"
+          },
+          "lib/net47/AcWindows.dll": {
+            "related": ".xml"
+          },
+          "lib/net47/AdUIMgd.dll": {
+            "related": ".xml"
+          },
+          "lib/net47/AdUiPalettes.dll": {
+            "related": ".xml"
+          },
+          "lib/net47/AdWindows.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "AutoCAD.NET.Core/24.1.51000": {
+        "type": "package",
+        "dependencies": {
+          "AutoCAD.NET.Model": "[24.1.51000]"
+        },
+        "compile": {
+          "lib/net47/AcCoreMgd.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net47/AcCoreMgd.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "AutoCAD.NET.Model/24.1.51000": {
+        "type": "package",
+        "compile": {
+          "lib/net47/AcDbMgd.dll": {
+            "related": ".xml"
+          },
+          "lib/net47/acdbmgdbrep.dll": {}
+        },
+        "runtime": {
+          "lib/net47/AcDbMgd.dll": {
+            "related": ".xml"
+          },
+          "lib/net47/acdbmgdbrep.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AutoCAD.NET/24.1.51000": {
+      "sha512": "5W9560XwX2/ykm2Q7+K7vH7rxc98uRpXuVnX8qVbbTZaz9DcYHv7mjOltkUtP75Q5hOAFstwjzns58nuIA3W1g==",
+      "type": "package",
+      "path": "autocad.net/24.1.51000",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "adsk.xml",
+        "autocad.net.24.1.51000.nupkg.sha512",
+        "autocad.net.nuspec",
+        "lib/net47/AcCui.dll",
+        "lib/net47/AcCui.xml",
+        "lib/net47/AcDx.dll",
+        "lib/net47/AcDx.xml",
+        "lib/net47/AcMgd.dll",
+        "lib/net47/AcMgd.xml",
+        "lib/net47/AcMr.dll",
+        "lib/net47/AcMr.xml",
+        "lib/net47/AcSeamless.dll",
+        "lib/net47/AcSeamless.xml",
+        "lib/net47/AcTcMgd.dll",
+        "lib/net47/AcTcMgd.xml",
+        "lib/net47/AcWindows.dll",
+        "lib/net47/AcWindows.xml",
+        "lib/net47/AdUIMgd.dll",
+        "lib/net47/AdUIMgd.xml",
+        "lib/net47/AdUiPalettes.dll",
+        "lib/net47/AdUiPalettes.xml",
+        "lib/net47/AdWindows.dll",
+        "lib/net47/AdWindows.xml",
+        "license.txt",
+        "tools/install.ps1"
+      ]
+    },
+    "AutoCAD.NET.Core/24.1.51000": {
+      "sha512": "x988k87Y1NxAJcgu22zcuGUSkuTPjSH2mKwZSU82eZILhTrBj2eVi38XM6D4nJoB05xtAc+0a/e6hqUc1O6Ojw==",
+      "type": "package",
+      "path": "autocad.net.core/24.1.51000",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "adsk.xml",
+        "autocad.net.core.24.1.51000.nupkg.sha512",
+        "autocad.net.core.nuspec",
+        "lib/net47/AcCoreMgd.dll",
+        "lib/net47/AcCoreMgd.xml",
+        "license.txt",
+        "tools/install.ps1"
+      ]
+    },
+    "AutoCAD.NET.Model/24.1.51000": {
+      "sha512": "ab96enRqyAgRXSJQCblBwSLJ0kSGwdD4XNxKJFZdfirlZDj3IQymf7cLcxzHVESO19uziO8d4rMLthD4ty8bSA==",
+      "type": "package",
+      "path": "autocad.net.model/24.1.51000",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "adsk.xml",
+        "autocad.net.model.24.1.51000.nupkg.sha512",
+        "autocad.net.model.nuspec",
+        "lib/net47/AcDbMgd.dll",
+        "lib/net47/AcDbMgd.xml",
+        "lib/net47/AcDbMgdBrep.xml",
+        "lib/net47/acdbmgdbrep.dll",
+        "license.txt",
+        "tools/install.ps1"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "AutoCAD.NET >= 24.1.51000"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Per\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Per\\Downloads\\autocad&mcp\\AutoCad3DPlugin\\AutoCad3DPlugin.csproj",
+      "projectName": "AutoCad3DPlugin",
+      "projectPath": "C:\\Users\\Per\\Downloads\\autocad&mcp\\AutoCad3DPlugin\\AutoCad3DPlugin.csproj",
+      "packagesPath": "C:\\Users\\Per\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Per\\Downloads\\autocad&mcp\\AutoCad3DPlugin\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Per\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "dependencies": {
+          "AutoCAD.NET": {
+            "target": "Package",
+            "version": "[24.1.51000, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.422/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'AutoCAD.NET 24.1.51000' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "AutoCAD.NET",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'AutoCAD.NET.Core 24.1.51000' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "AutoCAD.NET.Core",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'AutoCAD.NET.Model 24.1.51000' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "AutoCAD.NET.Model",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}

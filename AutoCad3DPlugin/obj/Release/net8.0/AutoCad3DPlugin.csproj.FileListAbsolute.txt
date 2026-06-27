@@ -1,0 +1,13 @@
+C:\Users\Per\Downloads\autocad&mcp\AutoCad3DPlugin\bin\Release\net8.0\AutoCad3DPlugin.deps.json
+C:\Users\Per\Downloads\autocad&mcp\AutoCad3DPlugin\bin\Release\net8.0\AutoCad3DPlugin.dll
+C:\Users\Per\Downloads\autocad&mcp\AutoCad3DPlugin\bin\Release\net8.0\AutoCad3DPlugin.pdb
+C:\Users\Per\Downloads\autocad&mcp\AutoCad3DPlugin\obj\Release\net8.0\AutoCad3DPlugin.csproj.AssemblyReference.cache
+C:\Users\Per\Downloads\autocad&mcp\AutoCad3DPlugin\obj\Release\net8.0\AutoCad3DPlugin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Per\Downloads\autocad&mcp\AutoCad3DPlugin\obj\Release\net8.0\AutoCad3DPlugin.AssemblyInfoInputs.cache
+C:\Users\Per\Downloads\autocad&mcp\AutoCad3DPlugin\obj\Release\net8.0\AutoCad3DPlugin.AssemblyInfo.cs
+C:\Users\Per\Downloads\autocad&mcp\AutoCad3DPlugin\obj\Release\net8.0\AutoCad3DPlugin.csproj.CoreCompileInputs.cache
+C:\Users\Per\Downloads\autocad&mcp\AutoCad3DPlugin\obj\Release\net8.0\AutoCad3DPlugin.sourcelink.json
+C:\Users\Per\Downloads\autocad&mcp\AutoCad3DPlugin\obj\Release\net8.0\AutoCad3DPlugin.dll
+C:\Users\Per\Downloads\autocad&mcp\AutoCad3DPlugin\obj\Release\net8.0\refint\AutoCad3DPlugin.dll
+C:\Users\Per\Downloads\autocad&mcp\AutoCad3DPlugin\obj\Release\net8.0\AutoCad3DPlugin.pdb
+C:\Users\Per\Downloads\autocad&mcp\AutoCad3DPlugin\obj\Release\net8.0\ref\AutoCad3DPlugin.dll

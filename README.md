@@ -1,43 +1,47 @@
-# 🏗️ AutoCAD 2D MCP Project: Curtain Wall Bracket Shop Drawings
+# 🏗️ AutoCAD V2 Hybrid MCP Project: Curtain Wall Bracket Shop Drawings
 
 [![AutoCAD](https://img.shields.io/badge/AutoCAD-2022%2B-red.svg)](#)
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](#)
+[![C# .NET](https://img.shields.io/badge/C%23-.NET%208.0-purple.svg)](#)
 [![MCP](https://img.shields.io/badge/MCP-Protocol-green.svg)](#)
 [![Standard](https://img.shields.io/badge/Standard-JIS-orange.svg)](#)
 
 ## 📌 Project Overview / Tổng quan dự án
 
-**[EN]** This project demonstrates the integration of **AI Automation** with **AutoCAD 2D** to automatically generate a complete Shop Drawing package for a Stainless Steel Curtain Wall Bracket system. It leverages the **Model Context Protocol (MCP)** and Python's `win32com` library to control AutoCAD via the COM API. The drawings strictly follow the **Japanese Industrial Standards (JIS)**, making it highly applicable for Japanese architectural and metalwork projects.
+**[EN]** This project demonstrates the integration of **AI Automation** with **AutoCAD** to automatically generate a complete Shop Drawing package and 3D Models for a Stainless Steel Curtain Wall Bracket system. 
+**Version 2.0 Upgrade:** The project has evolved from a pure Python 2D script to a **Hybrid Architecture**:
+1. **Python MCP Server**: Handles AI orchestration and engineering calculations.
+2. **C# .NET AutoCAD Plugin (ObjectARX)**: Handles high-performance 3D solid modeling and geometric extraction.
 
-**[VN]** Dự án này thể hiện sự tích hợp giữa **Trí tuệ nhân tạo (AI)** và **AutoCAD 2D** để tự động hóa việc xuất một bộ hồ sơ bản vẽ gia công (Shop Drawing) hoàn chỉnh cho hệ thống Bracket Inox mặt dựng kính. Dự án sử dụng **Model Context Protocol (MCP)** và thư viện `win32com` của Python để giao tiếp với AutoCAD COM API. Các bản vẽ tuân thủ nghiêm ngặt **Tiêu chuẩn Công nghiệp Nhật Bản (JIS)**, phù hợp cho môi trường làm việc kỹ thuật cơ khí & kiến trúc Nhật Bản.
+**[VN]** Dự án này thể hiện sự tích hợp giữa **Trí tuệ nhân tạo (AI)** và **AutoCAD** để tự động hóa việc xuất hồ sơ bản vẽ gia công (Shop Drawing) và Mô hình 3D cho hệ thống Bracket Inox mặt dựng kính.
+**Bản nâng cấp V2.0:** Dự án đã tiến hóa từ script 2D Python thuần túy sang **Kiến trúc Hybrid**:
+1. **Python MCP Server**: Xử lý điều phối AI và tính toán kỹ thuật.
+2. **C# .NET AutoCAD Plugin (ObjectARX)**: Xử lý mô hình hóa Solid 3D hiệu năng cao và trích xuất hình học.
 
 ---
 
-## 🎯 Key Features / Tính năng nổi bật
+## 🎯 V2 Key Features / Tính năng nổi bật V2
 
 1. **JIS Compliance (Chuẩn JIS):**
    * **JIS B 0001**: Technical drafting conventions (Layers, Linetypes, Dimension Styles).
    * **JIS Z 3021**: Welding symbols (Ký hiệu hàn).
    * **JIS B 3402**: Bilingual (JP/EN) A3 Title Block fields.
-2. **Shop Drawing Package (Bộ hồ sơ hoàn chỉnh):**
-   * DWG-001: General Arrangement (Mặt đứng tổng thể)
-   * DWG-002: Bracket Type-A Detail (Chi tiết Bracket A)
-   * DWG-003: Bracket Type-B Detail (Chi tiết Bracket B)
-   * DWG-004: Connection & Anchor Detail (Chi tiết neo & hàn)
-   * DWG-005: 3D Exploded View in 2D (Bản vẽ phân rã Isometric)
-   * DWG-006: Bill of Materials (Bảng thống kê vật tư)
-3. **AI-Driven Automation (Tự động hóa qua AI):**
-   * An MCP Server translates AI Agent prompts into executable AutoCAD commands.
-   * Automates the creation of Layers, Lines, Polylines, Hatches, Dimensions, and Texts directly in the Model Space.
+2. **Engineering Calculation Engine (Động cơ tính toán):**
+   * Python-based module calculating Bracket Weight, Material Density (SUS304), and Bending Stress safety factors.
+3. **C# 3D Solid Generation (Mô hình 3D C#):**
+   * A compiled `.dll` loaded into AutoCAD executing operations orders of magnitude faster than COM.
+   * Parametric generation of 3D solids, boolean subtractions for bolt holes, and mass property extraction.
+4. **AI-Driven Automation (Tự động hóa qua AI):**
+   * An MCP Server translates AI Agent prompts into executable Python calculations and AutoCAD commands.
 
 ---
 
 ## 🛠️ Technology Stack / Công nghệ sử dụng
 
 * **CAD Software:** AutoCAD 2022 / 2023 / 2024
-* **Language:** Python 3.9+
-* **Libraries:** `pywin32` (COM automation), `mcp` (Model Context Protocol server)
-* **AI Integration:** Claude Desktop / Any MCP-compatible AI client
+* **Languages:** Python 3.9+ & C# (.NET 8.0)
+* **APIs:** AutoCAD COM API (`pywin32`) & AutoCAD Managed .NET API (ObjectARX)
+* **Protocol:** `mcp` (Model Context Protocol server)
 
 ---
 
@@ -47,23 +51,27 @@
 AutoCad-2D-MCP-Project/
 │
 ├── README.md                         # Project documentation
+├── STATE.md                          # Triage and progression state
 ├── autocad_mcp_server.py             # Main Python MCP server connecting to AutoCAD
-├── requirements.txt                  # Python dependencies (pywin32, mcp)
+│
+├── AutoCad3DPlugin/                  # [V2] C# .NET Project for AutoCAD
+│   ├── AutoCad3DPlugin.csproj
+│   └── BracketBuilder.cs             # 3D Solid generation logic
 │
 ├── plans/                            # AI Agent planning files (.md)
 │   ├── 00-master-plan.md
-│   ├── 01-mcp-server-spec.md
-│   ├── 02-drawing-setup.md
-│   ├── 03-dwg001-assembly.md
 │   ├── ...
+│   └── 11-calc-engine.md             # V2 logic plans
 │
-├── drawings/                         # Output generated .dwg files
-│   ├── DWG-001_General-Arrangement.dwg
-│   ├── DWG-002_Bracket-Type-A.dwg
+├── scripts/                          # Execution scripts & Calculation engine
+│   ├── calc_engine.py                # [V2] Structural calculation logic
+│   ├── draw_3d_bracket.py            # [V2] Demo script connecting Calc + 3D
+│   ├── draw_dwg001.py                # V1 2D generation scripts
 │   └── ...
 │
+├── drawings/                         # Output generated .dwg files
+├── pdf-output/                       # Exported PDF deliverables
 └── reference/                        # Reference materials & standards
-    └── JIS_Guidelines.pdf
 ```
 
 ---
@@ -73,36 +81,27 @@ AutoCad-2D-MCP-Project/
 ### 1. Prerequisites (Yêu cầu hệ thống)
 * Windows OS with AutoCAD installed.
 * Python 3.9+ installed.
+* .NET 8.0 SDK (to build the C# plugin).
 
-### 2. Installation (Cài đặt)
-Clone the repository and install the required dependencies:
+### 2. Installation & Build (Cài đặt & Build)
+Clone the repository and build the C# plugin:
 ```bash
 git clone https://github.com/TPH-Per/AutoCad-2D-MCP-Project.git
 cd AutoCad-2D-MCP-Project
 pip install -r requirements.txt
+
+# Build the C# Plugin
+cd AutoCad3DPlugin
+dotnet build -c Release
 ```
 
-### 3. Running the MCP Server (Khởi chạy Server)
+### 3. Running the V2 Demo (Chạy thử nghiệm)
 1. Open **AutoCAD** and start a new blank drawing (`acad.dwt`).
-2. Run the MCP server in your terminal:
+2. Run the V2 demo script:
    ```bash
-   python autocad_mcp_server.py
+   python scripts/draw_3d_bracket.py
    ```
-3. Configure your AI Client (e.g., Claude Desktop) to connect to this local MCP server by adding it to your `claude_desktop_config.json`:
-   ```json
-   {
-     "mcpServers": {
-       "autocad": {
-         "command": "python",
-         "args": ["C:/path/to/your/AutoCad-2D-MCP-Project/autocad_mcp_server.py"]
-       }
-     }
-   }
-   ```
-
-### 4. Executing Prompts (Thực thi bản vẽ)
-Once connected, you can ask the AI to draw objects based on the plans provided in the `plans/` directory. For example:
-> *"Load the DWG-002 plan and use the AutoCAD MCP tools to generate the Bracket Type-A details."*
+   *This will run the Python structural calculations, connect to AutoCAD, load the compiled C# `.dll`, and generate the 3D solid bracket automatically.*
 
 ---
 
