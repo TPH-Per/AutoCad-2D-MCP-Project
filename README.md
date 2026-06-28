@@ -18,6 +18,11 @@
 1. **Python MCP Server**: Xử lý điều phối AI và tính toán kỹ thuật.
 2. **C# .NET AutoCAD Plugin (ObjectARX)**: Xử lý mô hình hóa Solid 3D hiệu năng cao và trích xuất hình học.
 
+**[JP]** このプロジェクトは、**AI自動化**と**AutoCAD**を統合し、ステンレス製カーテンウォールブラケットシステムの完全な製作図面（Shop Drawing）および3Dモデルを自動生成するシステムです。
+**V2.0 アップグレード:** 純粋なPython 2Dスクリプトから**ハイブリッドアーキテクチャ**へ進化しました：
+1. **Python MCPサーバー**: AIのオーケストレーションと技術計算を処理。
+2. **C# .NET AutoCADプラグイン (ObjectARX)**: 高性能な3Dソリッドモデリングと形状抽出を処理。
+
 ---
 
 ## 🎯 V2 Key Features / Tính năng nổi bật V2
@@ -33,6 +38,7 @@
    * Parametric generation of 3D solids, boolean subtractions for bolt holes, and mass property extraction.
 4. **AI-Driven Automation (Tự động hóa qua AI):**
    * An MCP Server translates AI Agent prompts into executable Python calculations and AutoCAD commands.
+   * Fully automated generation of 6 distinct shop drawing sheets.
 
 ---
 
@@ -66,7 +72,7 @@ AutoCad-2D-MCP-Project/
 ├── scripts/                          # Execution scripts & Calculation engine
 │   ├── calc_engine.py                # [V2] Structural calculation logic
 │   ├── draw_3d_bracket.py            # [V2] Demo script connecting Calc + 3D
-│   ├── draw_dwg001.py                # V1 2D generation scripts
+│   ├── draw_dwg001.py                # V1/V2 2D generation scripts (001-006)
 │   └── ...
 │
 ├── drawings/                         # Output generated .dwg files
@@ -95,9 +101,20 @@ cd AutoCad3DPlugin
 dotnet build -c Release
 ```
 
-### 3. Running the V2 Demo (Chạy thử nghiệm)
+### 3. Running the Scripts (Chạy thử nghiệm)
 1. Open **AutoCAD** and start a new blank drawing (`acad.dwt`).
-2. Run the V2 demo script:
+2. **Run the 2D Shop Drawing Suite (Sinh tự động 6 bản vẽ DWG):**
+   ```bash
+   python scripts/draw_dwg001.py
+   python scripts/draw_dwg002.py
+   python scripts/draw_dwg003.py
+   python scripts/draw_dwg004.py
+   python scripts/draw_dwg005.py
+   python scripts/draw_dwg006.py
+   ```
+   *The generated CAD drawings will be automatically saved in the `drawings/` folder.*
+
+3. **Run the 3D Hybrid Script (Kiểm thử mô hình 3D):**
    ```bash
    python scripts/draw_3d_bracket.py
    ```
