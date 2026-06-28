@@ -52,7 +52,7 @@ async def main():
     # 8. Zoom and Save
     await acad.acad_zoom_extents()
     out_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "drawings", "DWG-001_General-Arrangement.dwg")
-    # await acad.acad_save(out_path) # Disabled to prevent crash if acad not running
+    await acad.acad_save(out_path) # Disabled to prevent crash if acad not running
     print(f"Finished DWG-001. Save path: {out_path}")
 
 if __name__ == "__main__":

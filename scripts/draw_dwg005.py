@@ -35,7 +35,7 @@ async def main():
     
     await acad.acad_zoom_extents()
     out_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "drawings", "DWG-005_Exploded-View.dwg")
-    # await acad.acad_save(out_path)
+    await acad.acad_save(out_path)
     print(f"Finished DWG-005. Save path: {out_path}")
 
 if __name__ == "__main__":

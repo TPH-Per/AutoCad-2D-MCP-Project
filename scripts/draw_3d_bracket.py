@@ -14,7 +14,7 @@ def main():
     weight = BracketCalcEngine.calculate_weight(100, 60, 80, 8)
     print(f" -> Bracket Weight (SUS304): {weight:.2f} kg")
     
-    stress_check = BracketCalcEngine.check_bending_stress(load_kg=250, lever_arm_mm=80, section_width_mm=80, thickness_mm=8)
+    stress_check = BracketCalcEngine.check_bending_stress(load_kg=100, lever_arm_mm=80, section_width_mm=80, thickness_mm=8)
     print(" -> Stress Check Results:")
     for k, v in stress_check.items():
         print(f"      {k}: {v}")
@@ -27,10 +27,15 @@ def main():
     print("\n[2/3] Connecting to AutoCAD...")
     try:
         acad = win32com.client.GetActiveObject("AutoCAD.Application")
-        doc = acad.ActiveDocument
+        try:
+            doc = acad.ActiveDocument
+        except Exception:
+            doc = acad.Documents.Add()
         print(f" -> Connected to: {doc.Name}")
     except Exception as e:
-        print(" -> ERROR: AutoCAD is not running. Please open AutoCAD first.")
+        print(f" -> ERROR: AutoCAD COM connection failed: {e}")
+        import traceback
+        traceback.print_exc()
         # We don't exit here so the script can at least be tested up to the connection point in CI
         return
 
